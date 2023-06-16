@@ -1,0 +1,25 @@
+<div class="header">
+  <div class="chat-field" id="all-chat">
+
+    <div class="message ai-message">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="message ai-message">
+      Hello! How can I assist you today?
+    </div>
+    <div class="message user-message">
+      Hello! How can I assist you today?
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="message-input">
+    <%= form_with url: send_message_interfaces_path, id: "question-form", data: {controller: "interface", action: 'submit->interface#sendQuestion'} do |f|%>
+      <%= f.select :language, ["TR", "EN"], {}, class: "form-input"%>
+      <%= f.text_field :question, class: "form-input", placeholder: "Okulumuz ile ilgili soru sor"%>
+      <%= f.submit "Gönder" %>
+    <% end %>
+  </div>
+</div>

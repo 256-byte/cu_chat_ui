@@ -1,0 +1,110 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-color: #36454f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.chat-field {
+  margin: 0 auto;
+  width: 50%;
+  /* display: grid; */
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 40px;
+}
+
+.message-input {
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+}
+
+.message-input input[type=submit] {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  background-color: #005D1C;
+  color: white;
+  padding: 10px 8px;
+  font-weight: bold;
+}
+
+.message-input input[type=submit]:hover {
+  background-color: #014d18;
+  cursor: pointer;
+}
+
+.form-input {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  border-radius: 8px;
+  color: white;
+  background-color: #708090;
+  padding: 12px;
+  line-height: 1.5;
+  font-size: 16px;
+  border: 0;
+}
+
+input[type=text].form-input {
+  appearance: none;
+  width: 100%;
+  margin-left: 10px;
+}
+
+/* .form-input select {
+
+} */
+
+.form-input::placeholder {
+  color: white;
+}
+
+.message {
+  width: fit-content;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  clear: both;
+}
+
+.ai-message {
+  float: left;
+  background-color: #6e7f80;
+}
+
+.user-message {
+  float: right;
+  background-color: #6f7c85;
+}
+
+#question-form {
+  width: 100%;
+  display: flex;
+}
